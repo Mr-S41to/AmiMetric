@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Relações — Decisões & Reflexões</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="brand-icon">
+          R
+        </div>
+
+        <div class="brand-text">
+          <strong>Relações</strong>
+
+          <span>
+            Decisões & Reflexões
+          </span>
+        </div>
+
+      </div>
+
+
+      <nav class="navigation">
+
+        <button
+          class="nav-button active"
+          data-screen="relations"
+        >
+          <span>◉</span>
+          Relações
+        </button>
+
+
+        <button
+          class="nav-button"
+          data-screen="data"
+        >
+          <span>⇅</span>
+          Dados
+        </button>
+
+
+        <button
+          class="nav-button"
+          data-screen="about"
+        >
+          <span>?</span>
+          Sobre
+        </button>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+
+    <main class="content">
+
+
+      <!-- =======================================
+           RELAÇÕES
+      ======================================== -->
+
+      <section
+        id="relationsScreen"
+        class="screen active"
+      >
+
+        <header class="page-header">
+
+          <div>
+
+            <p class="eyebrow">
+              MAPA PESSOAL
+            </p>
+
+            <h1>
+              Minhas relações
+            </h1>
+
+            <p class="subtitle">
+              Observe suas relações com mais clareza
+              antes de tomar decisões.
+            </p>
+
+          </div>
+
+
+          <button
+            id="newRelationButton"
+            class="primary-button"
+          >
+            + Nova relação
+          </button>
+
+        </header>
+
+
+        <div
+          id="relationsSummary"
+          class="summary"
+        ></div>
+
+
+        <div
+          id="relationsList"
+          class="relations-list"
+        ></div>
+
+      </section>
+
+
+
+      <!-- =======================================
+           DADOS
+      ======================================== -->
+
+      <section
+        id="dataScreen"
+        class="screen"
+      >
+
+        <header class="page-header">
+
+          <div>
+
+            <p class="eyebrow">
+              DADOS
+            </p>
+
+            <h1>
+              Seus dados
+            </h1>
+
+            <p class="subtitle">
+              Faça backups ou restaure seus dados.
+            </p>
+
+          </div>
+
+        </header>
+
+
+        <div class="card data-card">
+
+          <div class="data-icon">
+            ⇅
+          </div>
+
+
+          <h2>
+            Armazenamento local
+          </h2>
+
+
+          <p>
+            Os dados deste protótipo são armazenados
+            localmente no navegador através do
+            <strong>localStorage</strong>.
+          </p>
+
+
+          <p>
+            Você pode exportar uma cópia em JSON para
+            guardar seus dados ou importá-la posteriormente.
+          </p>
+
+
+          <div class="data-actions">
+
+            <button
+              id="exportButton"
+              class="primary-button"
+            >
+              Exportar JSON
+            </button>
+
+
+            <button
+              id="importButton"
+              class="secondary-button"
+            >
+              Importar JSON
+            </button>
+
+
+            <input
+              id="importFile"
+              type="file"
+              accept=".json,application/json"
+              hidden
+            >
+
+          </div>
+
+
+          <div class="danger-zone">
+
+            <h3>
+              Zona de perigo
+            </h3>
+
+            <p>
+              Apaga todas as relações e avaliações
+              armazenadas neste navegador.
+            </p>
+
+            <button
+              id="clearDataButton"
+              class="danger-button"
+            >
+              Apagar todos os dados
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =======================================
+           SOBRE
+      ======================================== -->
+
+      <section
+        id="aboutScreen"
+        class="screen"
+      >
+
+        <header class="page-header">
+
+          <div>
+
+            <p class="eyebrow">
+              SOBRE
+            </p>
+
+            <h1>
+              Como funciona
+            </h1>
+
+          </div>
+
+        </header>
+
+
+        <div class="card about-card">
+
+          <h2>
+            Objetivo
+          </h2>
+
+          <p>
+            Este aplicativo foi criado para organizar
+            pensamentos sobre relações pessoais e ajudar
+            a identificar padrões ao longo do tempo.
+          </p>
+
+
+          <p>
+            Ele não determina se uma relação deve continuar
+            ou terminar. A decisão continua sendo da própria
+            pessoa.
+          </p>
+
+
+          <h2>
+            O que é avaliado?
+          </h2>
+
+
+          <ul>
+
+            <li>
+              Importância da relação
+            </li>
+
+            <li>
+              Desgaste emocional
+            </li>
+
+            <li>
+              Conflitos de valores
+            </li>
+
+            <li>
+              Confiança
+            </li>
+
+            <li>
+              Respeito aos limites
+            </li>
+
+            <li>
+              Possibilidade de convivência
+            </li>
+
+          </ul>
+
+
+          <h2>
+            Privacidade
+          </h2>
+
+          <p>
+            Nesta versão, os dados não são enviados para
+            um servidor. Eles permanecem armazenados
+            localmente no navegador.
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+
+  <!-- =========================================
+       MODAL — RELAÇÃO
+  ========================================== -->
+
+  <div
+    id="relationModal"
+    class="modal hidden"
+  >
+
+    <div
+      class="modal-overlay"
+      data-close="relation"
+    ></div>
+
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <div>
+
+          <p class="eyebrow">
+            CADASTRO
+          </p>
+
+          <h2 id="relationModalTitle">
+            Nova relação
+          </h2>
+
+        </div>
+
+
+        <button
+          id="closeRelationModal"
+          class="close-button"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <form id="relationForm">
+
+        <input
+          id="relationId"
+          type="hidden"
+        >
+
+
+        <div class="form-group">
+
+          <label for="relationName">
+            Nome
+          </label>
+
+          <input
+            id="relationName"
+            type="text"
+            placeholder="Ex.: João"
+            required
+            maxlength="100"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="relationType">
+            Tipo de relação
+          </label>
+
+          <select id="relationType">
+
+            <option value="Amizade">
+              Amizade
+            </option>
+
+            <option value="Família">
+              Família
+            </option>
+
+            <option value="Relacionamento">
+              Relacionamento
+            </option>
+
+            <option value="Trabalho">
+              Trabalho
+            </option>
+
+            <option value="Negócios">
+              Negócios
+            </option>
+
+            <option value="Outro">
+              Outro
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="relationNotes">
+            Observações
+          </label>
+
+          <textarea
+            id="relationNotes"
+            rows="4"
+            maxlength="1000"
+            placeholder="O que você considera importante registrar?"
+          ></textarea>
+
+        </div>
+
+
+        <div class="form-actions">
+
+          <button
+            type="button"
+            id="cancelRelationButton"
+            class="secondary-button"
+          >
+            Cancelar
+          </button>
+
+
+          <button
+            type="submit"
+            class="primary-button"
+          >
+            Salvar
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       MODAL — AVALIAÇÃO
+  ========================================== -->
+
+  <div
+    id="evaluationModal"
+    class="modal hidden"
+  >
+
+    <div
+      class="modal-overlay"
+      data-close="evaluation"
+    ></div>
+
+
+    <div class="modal-content evaluation-modal">
+
+      <div class="modal-header">
+
+        <div>
+
+          <p class="eyebrow">
+            AVALIAÇÃO
+          </p>
+
+          <h2 id="evaluationTitle">
+            Avaliação
+          </h2>
+
+        </div>
+
+
+        <button
+          id="closeEvaluationModal"
+          class="close-button"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div
+        id="evaluationContent"
+      ></div>
+
+
+      <div class="evaluation-footer">
+
+        <button
+          id="cancelEvaluationButton"
+          class="secondary-button"
+        >
+          Cancelar
+        </button>
+
+
+        <button
+          id="saveEvaluationButton"
+          class="primary-button"
+        >
+          Salvar avaliação
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       MODAL — RESULTADO
+  ========================================== -->
+
+  <div
+    id="resultModal"
+    class="modal hidden"
+  >
+
+    <div
+      class="modal-overlay"
+      data-close="result"
+    ></div>
+
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <div>
+
+          <p class="eyebrow">
+            REFLEXÃO
+          </p>
+
+          <h2>
+            Análise da avaliação
+          </h2>
+
+        </div>
+
+
+        <button
+          id="closeResultModal"
+          class="close-button"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div id="resultContent"></div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
